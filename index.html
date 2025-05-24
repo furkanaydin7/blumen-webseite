@@ -1,38 +1,40 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Für Poesia Bouquet</title>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Lora&display=swap" rel="stylesheet">
   <style>
-    * {
-      box-sizing: border-box;
-    }
     body {
       margin: 0;
-      font-family: 'Lora', serif;
-      background: url('https://www.transparenttextures.com/patterns/pw-maze-white.png'), linear-gradient(#fff8f5, #fceff1);
+      padding: 0;
+      font-family: 'Georgia', serif;
+      background: linear-gradient(#fff8f5, #fceff1);
       color: #4b2e2e;
-      overflow-x: hidden;
-    }
-    section {
-      display: none;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      padding: 2rem;
       text-align: center;
     }
-    section.active {
-      display: flex;
+    header {
+      padding: 4rem 1rem;
+      background-image: url('https://images.unsplash.com/photo-1501004318641-b39e6451bec6');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      text-shadow: 0 0 10px rgba(0,0,0,0.5);
     }
-    h1, h2 {
-      font-family: 'DM Serif Display', serif;
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+    }
+    p.poetic {
+      font-style: italic;
+      font-size: 1.2rem;
+      margin: 2rem;
+    }
+    .invitation {
+      font-size: 1.4rem;
+      margin: 3rem 1rem;
     }
     .button {
-      margin-top: 2rem;
       display: inline-block;
       background-color: #e89cb3;
       color: white;
@@ -42,55 +44,35 @@
       font-size: 1.2rem;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
       transition: background 0.3s;
-      font-family: 'Lora', serif;
-      border: none;
-      cursor: pointer;
     }
     .button:hover {
       background-color: #c77495;
     }
     footer {
-      text-align: center;
-      padding: 2rem;
+      margin-top: 5rem;
       font-size: 0.9rem;
       color: #7a5b5b;
     }
   </style>
 </head>
 <body>
-  <section class="active" id="step1">
-    <h1>Hallo Büsra!</h1>
-    <p>Diese Seite ist nur für dich. 💐</p>
-    <button class="button" onclick="nextStep(2)">Weiter</button>
-  </section>
+  <header>
+    <h1>Für die Frau hinter Poesia Bouquet</h1>
+    <p class="poetic">Ein digitaler Blumenstrauß für eine, die selbst Blüten zur Poesie macht.</p>
+  </header>
 
-  <section id="step2">
-    <h2>Warum wirken Blumensträuße so tief auf uns?</h2>
-    <p>Vielleicht, weil sie etwas sagen, das Worte oft nicht können.</p>
-    <button class="button" onclick="nextStep(3)">Weiter</button>
-  </section>
+  <main>
+    <p class="invitation">
+      Deine Liebe zu Blumen ist inspirierend – jedes Arrangement erzählt eine eigene Geschichte. <br/>
+      Darf ich dich auf einen Kaffee einladen?<br/>
+      Nicht digital, sondern persönlich. 🌷
+    </p>
 
-  <section id="step3">
-    <h2>Deine Werke</h2>
-    <p>Deine Sträuße sind mehr als schön – sie sind Gefühle in Farbe.</p>
-    <button class="button" onclick="nextStep(4)">Weiter</button>
-  </section>
-
-  <section id="step4">
-    <h2>Darum frage ich...</h2>
-    <p>Darf ich dich auf einen Kaffee einladen? 🌷</p>
     <a href="https://instagram.com/deinprofil" class="button">Sag ja – oder vielleicht? ☕</a>
-  </section>
+  </main>
 
   <footer>
-    <p>© Nur für Poesia Bouquet 🌸</p>
+    <p>Diese Seite ist nur für dich.</p>
   </footer>
-
-  <script>
-    function nextStep(step) {
-      document.querySelectorAll('section').forEach(sec => sec.classList.remove('active'));
-      document.getElementById('step' + step).classList.add('active');
-    }
-  </script>
 </body>
 </html>
