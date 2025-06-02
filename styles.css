@@ -1,0 +1,56 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Lora', serif;
+  background: url('https://www.transparenttextures.com/patterns/pw-maze-white.png'), linear-gradient(#fff8f5, #fceff1);
+  color: #4b2e2e;
+  overflow-x: hidden;
+}
+
+section {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+  text-align: center;
+}
+
+section.active {
+  display: flex;
+}
+
+h1, h2 {
+  font-family: 'DM Serif Display', serif;
+}
+
+.button {
+  margin-top: 2rem;
+  display: inline-block;
+  background-color: #e89cb3;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s;
+  font-family: 'Lora', serif;
+  border: none;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #c77495;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.9rem;
+  color: #7a5b5b;
+} 
